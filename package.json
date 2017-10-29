@@ -1,0 +1,62 @@
+{
+  "name": "buttplug-websocket-server",
+  "version": "0.0.1",
+  "description": "Node.js Websocket Server frontend for Buttplug",
+  "repository": "https://github.com/metafetish/buttplug-js-websocket-server",
+  "author": "Kyle Machulis <kyle@nonpolynomial.com>",
+  "license": "BSD-3-Clause",
+  "main": "./dist/index.js",
+  "types": "./dist/types/index.d.ts",
+  "scripts": {
+    "build": "trash dist dist-bundle && yarn build:main",
+    "build:main": "tsc -p tsconfig.json",
+    "tslint": "tslint -c tslint.json \"src/**/*.ts\" \"tests/**/*.ts\"",
+    "tslint:fix": "tslint -c tslint.json --fix semicolon,comma,no-var-keyword,ordered-imports \"src/**/*.ts\" \"tests/**/*.ts\"",
+    "pretest": "yarn build:main",
+    "test": "nyc mocha \"tests/**/*.ts\"",
+    "posttest": "nyc report && codecov -f coverage/*.json"
+  },
+  "dependencies": {
+    "buttplug": "^0.2.2",
+    "ws": "^3.2.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.0.4",
+    "@types/mocha": "^2.2.44",
+    "@types/node": "^8.0.47",
+    "@types/text-encoding": "^0.0.32",
+    "chai": "^4.1.2",
+    "codecov": "^3.0.0",
+    "copyfiles": "^1.2.0",
+    "mocha": "^4.0.1",
+    "mock-socket": "^7.0.0",
+    "nyc": "^11.2.1",
+    "trash-cli": "^1.4.0",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.8.0",
+    "typescript": "^2.5.3",
+    "yarn": "^1.2.1"
+  },
+  "nyc": {
+    "extension": [
+      ".ts"
+    ],
+    "include": [
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "**/*.d.ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "text",
+      "json",
+      "html"
+    ],
+    "sourceMap": true,
+    "instrument": true,
+    "all": true
+  }
+}
