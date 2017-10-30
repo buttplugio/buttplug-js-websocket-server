@@ -17,14 +17,16 @@
     "posttest": "nyc report && codecov -f coverage/*.json"
   },
   "dependencies": {
-    "buttplug": "^0.2.2",
+    "buttplug": "^0.3.0",
+    "noble": "^1.8.1",
     "ws": "^3.2.0"
   },
   "devDependencies": {
     "@types/chai": "^4.0.4",
     "@types/mocha": "^2.2.44",
+    "@types/noble": "^0.0.34",
     "@types/node": "^8.0.47",
-    "@types/text-encoding": "^0.0.32",
+    "@types/ws": "^3.2.0",
     "chai": "^4.1.2",
     "codecov": "^3.0.0",
     "copyfiles": "^1.2.0",
