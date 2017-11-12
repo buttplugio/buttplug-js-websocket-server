@@ -15,7 +15,8 @@
     "pretest": "yarn build:main",
     "start": "node dist/index.js",
     "test": "nyc mocha \"tests/**/*.ts\"",
-    "posttest": "nyc report && codecov -f coverage/*.json"
+    "posttest": "nyc report && codecov -f coverage/*.json",
+    "freeze:win": "pkg dist/index.js --targets node8-win-x86"
   },
   "dependencies": {
     "buttplug": "^0.3.0",
@@ -38,6 +39,7 @@
     "mocha": "^4.0.1",
     "mock-socket": "^7.0.0",
     "nyc": "^11.3.0",
+    "pkg": "^4.3.0-beta.1",
     "trash-cli": "^1.4.0",
     "ts-node": "^3.3.0",
     "tslint": "^5.8.0",
