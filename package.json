@@ -22,6 +22,7 @@
     "commander": "^2.11.0",
     "noble": "^1.8.1",
     "selfsigned": "^1.10.1",
+    "usb": "git+https://github.com/tessel/node-usb.git",
     "ws": "^3.3.1"
   },
   "devDependencies": {
