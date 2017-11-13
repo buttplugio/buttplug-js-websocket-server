@@ -13,8 +13,8 @@ install:
   - set PATH=%APPDATA%\npm;%PATH%
   - npm install
   - npm run build
-  - npm run freeze:win
-  - ps: Push-AppveyorArtifact buttplug-node-server\buttplug-node-server.7z -FileName ButtplugNodeServer-$env:APPVEYOR_BUILD_VERSION.7z
+  - npm run package:win
+  - ps: Push-AppveyorArtifact buttplug-node-server.7z -FileName ButtplugNodeServer-$env:APPVEYOR_BUILD_VERSION.7z
 
 matrix:
   fast_finish: true
