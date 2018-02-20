@@ -5,7 +5,7 @@ import * as util from "util";
 import * as https from "https";
 import * as http from "http";
 import { ButtplugServer, ButtplugMessage, FromJSON } from "buttplug";
-import { NobleBluetoothDeviceManager } from "./NobleBluetoothDeviceManager";
+import { ButtplugNodeBluetoothLEDeviceManager } from "buttplug-node-bluetoothle-manager";
 const selfsigned = require("selfsigned");
 
 async function main() {
@@ -58,7 +58,7 @@ async function main() {
 
   console.log("Listening on port " + commander.port);
   const bs = new ButtplugServer();
-  bs.AddDeviceManager(new NobleBluetoothDeviceManager());
+  bs.AddDeviceManager(new ButtplugNodeBluetoothLEDeviceManager());
 
   wsServer.on("connection", function connection(client) {
     client.on("message", async (message) => {
@@ -72,6 +72,22 @@ async function main() {
     bs.on("message", function outgoing(message) {
       client.send("[" + message.toJSON() + "]");
     });
+  });
+
+  if (process.platform === "win32") {
+    const rl = require("readline").createInterface({
+      input: process.stdin,
+      output: process.stdout,
+    });
+
+    rl.on("SIGINT", () => {
+      process.emit("SIGINT");
+    });
+  }
+
+  process.on("SIGINT", () => {
+
+    process.exit();
   });
 }
 
