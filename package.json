@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "buttplug": "^0.6.0",
-    "buttplug-node-bluetoothle-manager": "^0.0.2",
+    "buttplug-node-bluetoothle-manager": "git+https://github.com/metafetish/buttplug-node-bluetoothle-manager#a8d2458",
     "commander": "^2.14.1",
     "noble": "^1.9.0",
     "selfsigned": "^1.10.2",
