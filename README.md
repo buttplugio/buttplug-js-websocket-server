@@ -29,18 +29,25 @@ If you find this project helpful, you can [support us on
 Patreon](http://patreon.com/qdot)! Every donation helps us afford more
 hardware to reverse, document, and write code for!
 
+## IMPORTANT BUILD NOTE
+
+**DO NOT USE YARN TO INSTALL THIS**
+
+Installing with yarn will break the native dependencies required for
+our bluetooth dependencies. Only use 'npm install' to install this.
+Afterwards, using yarn is fine.
+
+
 ## Installation
 
-To build the server, run the following command:
-
 ```
-yarn build
+npm run build
 ```
 
 To run the server after it is built, run the following command:
 
 ```
-yarn start
+npm run start
 ```
 
 ## License
