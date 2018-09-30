@@ -80,9 +80,9 @@ async function main() {
       output: process.stdout,
     });
 
-    rl.on("SIGINT", () => {
-      process.emit("SIGINT");
-    });
+    // rl.on("SIGINT", () => {
+    //   process.emit("SIGINT");
+    // });
   }
 
   process.on("SIGINT", () => {
