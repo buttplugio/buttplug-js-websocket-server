@@ -20,13 +20,10 @@
     "package:win": "yarn freeze:win && copy node_modules\\bluetooth-hci-socket\\build\\Release\\binding.node buttplug-node-server && copy node_modules\\usb\\src\\binding\\usb_bindings.node buttplug-node-server && 7z a buttplug-node-server.7z buttplug-node-server\\*"
   },
   "dependencies": {
-    "bluetooth-hci-socket": "https://github.com/jrobeson/node-bluetooth-hci-socket/#fix-builds-for-node-10",
     "buttplug": "^0.8.2",
     "buttplug-node-bluetoothle-manager": "^0.0.4",
     "commander": "^2.18.0",
-    "noble": "^1.9.1",
     "selfsigned": "^1.10.3",
-    "usb": "^1.4.0",
     "ws": "^6.0.0"
   },
   "devDependencies": {

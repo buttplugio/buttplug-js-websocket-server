@@ -12,11 +12,7 @@
 Native websocket server frontend for Buttplug. 
 
 This frontend is mainly for use on Windows 7 alpha builds of the
-Buttplug server, and may currently not work anywhere else. This repo
-is useful if you want to hit bluetooth le on Windows 7. The plan is to
-extend this to all platforms at some point, as it should easily
-support linux and os x also, we're just concentrating on Win7 for the
-time being.
+Buttplug server. It may also work on linux, macOS, and windows 10.
 
 ## Table Of Contents
 
@@ -31,23 +27,21 @@ hardware to reverse, document, and write code for!
 
 ## IMPORTANT BUILD NOTE
 
-**DO NOT USE YARN TO INSTALL THIS**
+**USE YARN TO INSTALL THIS**
 
-Installing with yarn will break the native dependencies required for
-our bluetooth dependencies. Only use 'npm install' to install this.
-Afterwards, using yarn is fine.
-
+Installing with npm will break the native dependencies required for
+our bluetooth dependencies. Only use yarn to install this.
 
 ## Installation
 
 ```
-npm run build
+yarn build
 ```
 
 To run the server after it is built, run the following command:
 
 ```
-npm run start
+yarn start
 ```
 
 ## License
