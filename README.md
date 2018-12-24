@@ -14,12 +14,12 @@ Native websocket server frontend for Buttplug.
 This frontend is mainly for use on Windows 7 alpha builds of the
 Buttplug server. It may also work on linux, macOS, and windows 10.
 
-**Note:** This project is provided as an example and without support.
+**Note:** This project is provided as an example and **without support**.
 If you want to try it, you are on your own, and it may or may not
 work. Dependencies may or may not be up to date with the main library
 repos. This message will be removed if/when the project moves to being
 supported, but right now the build system and native dependency
-requirements are way to flakey to recommend to anyone not familiar
+requirements are way to flaky to recommend to anyone not familiar
 with node and native libraries.
 
 ## Table Of Contents
